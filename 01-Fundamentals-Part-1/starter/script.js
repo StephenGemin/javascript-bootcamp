@@ -30,14 +30,26 @@ let markHeight2 = 1.88;
 let johnWeight2 = 85;
 let johnHeight2 = 1.76;
 
+let markBmi;
+let johnBmi;
 let markHigherBMI;
+
 
 
 function calculateBmi(mass, height) {
     return mass / (height ** 2)
 }
 
-markHigherBMI = calculateBmi(markWeight1, markHeight1) > calculateBmi(johnWeight1, johnHeight1)
+markBmi = calculateBmi(markWeight1, markHeight1)
+johnBmi = calculateBmi(johnWeight1, johnHeight1)
+markHigherBMI = markBmi > johnBmi
+console.log("Mark BMI: " + markBmi)
+console.log("John BMI: " + johnBmi)
 console.log("Case 1: " + markHigherBMI)
-markHigherBMI = calculateBmi(markWeight2, markHeight2) > calculateBmi(johnWeight2, johnHeight2)
+
+markBmi = calculateBmi(markWeight2, markHeight2)
+johnBmi = calculateBmi(johnWeight2, johnHeight2)
+markHigherBMI = markBmi > johnBmi
+console.log("Mark BMI: " + markBmi)
+console.log("John BMI: " + johnBmi)
 console.log("Case 2: " + markHigherBMI)
