@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -68,42 +68,41 @@ HINT: Call calcTip in the loop and use the push method to add values to the tips
 
 GOOD LUCK 😀
 */
-let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
-let totals = []
-let tips = []
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let totals = [];
+let tips = [];
 
 function calcAverage(arr) {
-    let total = 0;
-    for (let num of arr) {
-        total += num
-    }
-    return total / arr.length
+  let total = 0;
+  for (let num of arr) {
+    total += num;
+  }
+  return total / arr.length;
 }
 
 function calcTip(amount) {
-    // let arr = []
-    let amountInRange = amount >= 50 && amount <= 300
-    let tip = amountInRange ? 0.15 : 0.2
-    // arr.push([amount, amountInRange, tip])
-    console.log(`Amount: ${amount}, inRange: ${amountInRange}, tip: ${tip}`)
-    // console.table(arr)
-    return amount * tip
+  // let arr = []
+  let amountInRange = amount >= 50 && amount <= 300;
+  let tip = amountInRange ? 0.15 : 0.2;
+  // arr.push([amount, amountInRange, tip])
+  console.log(`Amount: ${amount}, inRange: ${amountInRange}, tip: ${tip}`);
+  // console.table(arr)
+  return amount * tip;
 }
 
+console.log(calcAverage(bills));
 
-console.log(calcAverage(bills))
-
-let caseList = []
+let caseList = [];
 for (let bill of bills) {
-    let tip = calcTip(bill)
-    let total = bill + tip
-    caseList.push([bill, tip, total])
+  let tip = calcTip(bill);
+  let total = bill + tip;
+  caseList.push([bill, tip, total]);
 }
 
-console.log("Case table")
-console.table(caseList)
+console.log("Case table");
+console.table(caseList);
 
-let y = caseList.cop
-let z = caseList[0].reverse()
-console.log(z)
-console.log(caseList[0])
+let y = caseList.cop;
+let z = caseList[0].reverse();
+console.log(z);
+console.log(caseList[0]);
